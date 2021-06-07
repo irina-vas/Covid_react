@@ -1,0 +1,65 @@
+.wrapper {
+  margin-bottom: 100px;
+}
+
+.tableHead {
+  border-radius: 10px;
+  border-top: none;
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: 500;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.tableHead, .countryItem {
+  display: flex;
+  width: 85vw;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.number, .tableHead_number {
+  width: 10%;
+}
+
+.country, .tableHead_country {
+  width: 60%;
+}
+
+.totalConfirmed, .tableHead_totalConfirmed {
+  width: 30%;
+}
+
+.tableHead_totalConfirmed {
+  padding-left: 10px;
+}
+
+.number, .country, .totalConfirmed, .tableHead {
+  padding: 10px;  
+  border: 1px solid;
+  box-shadow: 0px 9px 7px -9px rgba(0,0,0,0.23);
+  border-bottom: 0.5px solid #e0dede;
+  border-right: 0.5px solid #e0dede;
+  border-left: 0.5px solid #e0dede;
+  border-top: none;
+  margin-top: 10px
+}
+
+.number {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.totalConfirmed {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+}

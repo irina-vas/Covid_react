@@ -1,0 +1,82 @@
+.wrapper {
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.covidImage {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.searchForm {
+  position: relative;
+}
+
+.searchForm > input {
+  width: 350px;
+  height: 40px;
+  box-shadow: 0px 5px 20px -6px rgba(34, 60, 80, 0.38);
+  border-bottom: 0.5px solid #e0dede;
+  border-right: 0.5px solid #e0dede;
+  border-left: 0.5px solid #e0dede;
+  border-top: none;
+  border-radius: 10px;
+  padding: 5px 15px 0 15px;
+  outline:none;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: #b5b4b4;
+  font-size: 18px;
+  border: none;
+}
+
+:focus::placeholder {
+  color: transparent
+}
+
+.loupe {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4%;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  .searchForm > input{
+    margin: 30px 0;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .loupe {
+    width: 12px;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+
+  .covidImage {
+    margin-right: 0;
+  }
+}
+

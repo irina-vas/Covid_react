@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useEffect, useState} from 'react';
+import CountriesList from './components/CountriesList';
+import Header from './components/Header';
+import * as axios from 'axios';
+import Country from './components/Country';
 
 function App() {
+  const [countries, setCountries] = useState([]);
+  const [search, setSearch] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(null);
+ 
+  useEffect(() => {
+    const url = 'https://api.covid19api.com/summary';
+    axios.get(url)
+      .then(response => response)
+      .then(data => {
+        setCountries(data.data.Countries); 
+      }).catch(error => console.error(error))
+  },[])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header setSearch={setSearch} />
+      <CountriesList 
+        countries={countries} 
+        setCountries={setCountries} 
+        search={search} 
+        setSelectedCountry={setSelectedCountry} 
+      />
+      { selectedCountry && <Country selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry} /> }
     </div>
   );
 }

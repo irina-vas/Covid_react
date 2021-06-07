@@ -1,0 +1,63 @@
+.background {
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+  min-width: 400px;
+  border-radius: 10px;
+}
+
+.headline {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #727273;
+}
+
+.confirmed, .death, .recovered {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.content {
+  display: flex;
+}
+
+.icon {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.buttonOk {
+  display: block;
+  margin: 20px auto 5px;
+  padding: 9px;
+  width: 110px;
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .confirmed, .death, .recovered {
+    padding: 20px;
+  }
+}
